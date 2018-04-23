@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d50d47d-d111-4dbb-ad76-22521612fc8c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/i18n/admin_az.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/i18n/admin_en.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/i18n/home_az.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/i18n/home_en.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elib.iml" afterPath="$PROJECT_DIR$/elib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/assert/css/site.css" afterPath="$PROJECT_DIR$/src/main/resources/static/assert/css/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Security.java" afterPath="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Security.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/assert/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/assert/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/assert/css/site.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/assert/css/site.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/assert/js/shaheen.js" afterPath="$PROJECT_DIR$/src/main/resources/static/assert/js/shaheen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Security.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/WebMvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Web.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/assert/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/classes/static/assert/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/assert/css/site.css" afterPath="$PROJECT_DIR$/target/classes/static/assert/css/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/assert/css/site.min.css" afterPath="$PROJECT_DIR$/target/classes/static/assert/css/site.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/static/assert/js/shaheen.js" afterPath="$PROJECT_DIR$/target/classes/static/assert/js/shaheen.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/header.html" afterPath="$PROJECT_DIR$/target/classes/templates/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,26 +38,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Web.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Web.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="access-denied.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/access-denied.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,8 +51,28 @@
       <file leaf-file-name="site.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/site.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="781">
-              <caret line="1155" column="1" lean-forward="false" selection-start-line="1155" selection-start-column="1" selection-end-line="1155" selection-end-column="1" />
+            <state relative-caret-position="1522">
+              <caret line="537" column="17" lean-forward="true" selection-start-line="537" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/site.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="3337" column="0" lean-forward="false" selection-start-line="3337" selection-start-column="0" selection-end-line="3337" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Security.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Security.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -97,28 +93,28 @@
       <file leaf-file-name="shaheen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/js/shaheen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state relative-caret-position="105">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
               <caret line="64" column="87" lean-forward="true" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/bootstrap.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="3385" column="0" lean-forward="false" selection-start-line="3385" selection-start-column="0" selection-end-line="3385" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -169,6 +165,10 @@
       <find>category.categories.length &gt; 0</find>
       <find>modal</find>
       <find>http</find>
+      <find>min-width</find>
+      <find>dropdown</find>
+      <find>.dropdown-menu</find>
+      <find>160px</find>
     </findStrings>
     <replaceStrings>
       <replace>b.</replace>
@@ -185,8 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/mybatis/domain/Counter.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/db/db_structure.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/static/db/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/mybatis/domain/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/mybatis/domain/Publisher.java" />
@@ -210,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/login.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registration2.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/assert/css/site.min.css" />
         <option value="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/controller/BooksController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/books.html" />
         <option value="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/mybatis/domain/Feedback.java" />
@@ -232,10 +229,13 @@
         <option value="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Web.java" />
         <option value="$PROJECT_DIR$/src/main/resources/i18n/home_az.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/i18n/home_en.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/assert/js/shaheen.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/assert/css/site.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/header.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/assert/css/bootstrap.min.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/assert/js/shaheen.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/assert/css/site.min.css" />
+        <option value="$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Security.java" />
       </list>
     </option>
   </component>
@@ -401,6 +401,17 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="assert" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="elib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="elib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="assert" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="site.css" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="elib" type="b2602c69:ProjectViewProjectNode" />
@@ -972,8 +983,16 @@
       <workItem from="1511334901047" duration="5251000" />
       <workItem from="1511349570971" duration="5492000" />
       <workItem from="1511693235507" duration="666000" />
-      <workItem from="1524511978380" duration="3542000" />
+      <workItem from="1524511978380" duration="4783000" />
     </task>
+    <task id="LOCAL-00001" summary="i18 feature">
+      <created>1524515844197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524515844198</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1009,7 +1028,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97577000" />
+    <option name="totallyTimeSpent" value="98818000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1090,6 +1109,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="i18 feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="i18 feature" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="4" />
@@ -1101,20 +1124,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/site.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/forms.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="1037" column="22" lean-forward="false" selection-start-line="1037" selection-start-column="22" selection-end-line="1069" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/registration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2664">
@@ -1357,14 +1366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Security.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Localization.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1459,22 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/js/shaheen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="57" column="29" lean-forward="false" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="1155" column="1" lean-forward="false" selection-start-line="1155" selection-start-column="1" selection-end-line="1155" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -1487,6 +1472,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="64" column="87" lean-forward="true" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="3385" column="0" lean-forward="false" selection-start-line="3385" selection-start-column="0" selection-end-line="3385" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/js/shaheen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1522">
+          <caret line="537" column="17" lean-forward="true" selection-start-line="537" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assert/css/site.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="3337" column="0" lean-forward="false" selection-start-line="3337" selection-start-column="0" selection-end-line="3337" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/nazarov/shaheen/elib/config/Security.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
           <folding />
         </state>
       </provider>

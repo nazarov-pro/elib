@@ -23,7 +23,6 @@ var backToTop = function () {
     $('#back-to-top').hide();
 };
 
-
 app.controller("BooksCtrl", ['$scope', '$http', '$window','$sce', function ($scope, $http, $window , $sce) {
 
     var feedback ={};
