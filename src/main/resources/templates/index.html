@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head th:include="header :: stylejs">
+</head>
+
+<body ng-app="ElibApp" ng-controller="BooksCtrl" >
+<div th:include="header :: navigation"></div>
+<div class="container-fluid">
+    <!--documents-->
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div th:include="header :: categories"></div>
+        <div  ng-bind-html="booksContent" class="col-xs-12 col-sm-9 content"></div><!-- content -->
+    </div>
+</div>
+<!--footer-->
+<div th:include="footer :: black"></div>
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+</body>
+</html>

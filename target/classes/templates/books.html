@@ -1,0 +1,115 @@
+<div th:if="${#httpServletRequest.requestURI == '/books'}">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a href="javascript:void(0);" class="toggle-sidebar"><span
+                    class="fa fa-angle-double-left" data-toggle="offcanvas" title="Maximize Panel"></span></a>
+                Kitablar</h3>
+        </div>
+        <div class="panel-body">
+            <div id='content' class="content-row">
+                <h2 class="content-row-title">Sizə uyğun gələn kitablar</h2>
+                <div class="row">
+                    <div th:each="book : ${reccomenadations}" class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img class=" img-responsive img-thumbnail" style="width:320px;height:240px;"
+                                 th:src="@{${'/assert/img/book/' + book.image}}">
+                            <div class="caption text-center">
+                                <h3 th:text="${book.name}">Thumbnail label</h3>
+                                <p th:text="${book.description.length() > 150 ? (#strings.substring(book.description,0,150) + '...') : book.description}">
+                                    Cras justo
+                                    odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                    gravida at eget metus. Nullam id ...</p>
+                                <p><a th:href="@{${'/books/' + book.id }}" target="_blank"
+                                      class="btn btn-warning" role="button">Ətraflı Məlumat</a> <a href="#"
+                                                                                                   class="btn btn-default"
+                                                                                                   role="button">Yüklə</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="content-row-title">Ən Yeni və Populyar Kitablarımız</h2>
+                <div class="row">
+                    <div th:each="book : ${books}" class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img class=" img-responsive img-thumbnail" style="width:320px;height:240px;"
+                                 th:src="@{${'/assert/img/book/' + book.image}}">
+                            <div class="caption text-center">
+                                <h3 th:text="${book.name}">Thumbnail label</h3>
+                                <p th:text="${book.description.length() > 150 ? (#strings.substring(book.description,0,150) + '...') : book.description}">
+                                    Cras justo
+                                    odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                    gravida at eget metus. Nullam id ...</p>
+                                <p><a th:href="@{${'/books/' + book.id }}" target="_blank"
+                                      class="btn btn-warning" role="button">Ətraflı Məlumat</a> <a href="#"
+                                                                                                   class="btn btn-default"
+                                                                                                   role="button">Yüklə</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- panel body -->
+    </div>
+</div>
+
+<div th:if="${#httpServletRequest.requestURI.startsWith('/books/')}">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a href="javascript:void(0);" class="toggle-sidebar"><span
+                    class="fa fa-angle-double-left" data-toggle="offcanvas" title="Maximize Panel"></span></a>
+                Tema</h3>
+        </div>
+        <div class="panel-body">
+            <div id='content' class="content-row">
+                <h2 class="content-row-title">Sizə uyğun gələn kitablar</h2>
+                <div class="row">
+                    <div th:each="book : ${reccomenadations}" class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img class=" img-responsive img-thumbnail" style="width:320px;height:240px;"
+                                 th:src="@{${'/assert/img/book/' + book.image}}">
+                            <div class="caption text-center">
+                                <h3 th:text="${book.name}">Thumbnail label</h3>
+                                <p th:text="${book.description.length() > 150 ? (#strings.substring(book.description,0,150) + '...') : book.description}">
+                                    Cras justo
+                                    odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                    gravida at eget metus. Nullam id ...</p>
+                                <p><a th:href="@{${'/books/' + book.id }}" target="_blank"
+                                      class="btn btn-warning" role="button">Ətraflı Məlumat</a> <a href="#"
+                                                                                                   class="btn btn-default"
+                                                                                                   role="button">Yüklə</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="content-row-title">Ən Yeni Kitabları</h2>
+                <div class="row">
+                    <div th:each="book : ${books}" class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img class=" img-responsive img-thumbnail" style="width:320px;height:240px;"
+                                 th:src="@{${'/assert/img/book/' + book.image}}">
+                            <div class="caption text-center">
+                                <h3 th:text="${book.name}">Thumbnail label</h3>
+                                <p th:text="${book.description.length() > 150 ? (#strings.substring(book.description,0,150) + '...') : book.description}">
+                                    Cras justo
+                                    odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
+                                    gravida at eget metus. Nullam id ...</p>
+                                <p><a th:href="@{${'/books/' + book.id }}" target="_blank"
+                                      class="btn btn-warning" role="button">Ətraflı Məlumat</a> <a href="#"
+                                                                                                   class="btn btn-default"
+                                                                                                   role="button">Yüklə</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- panel body -->
+    </div>
+</div>

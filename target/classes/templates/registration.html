@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head th:include="header :: stylejs"></head>
+<body>
+<div th:include="header :: navigation"></div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<form autocomplete="off" action="#" th:action="@{/registration}"
+				  th:object="${user}" method="post" class="form-horizontal"
+				  role="form">
+				<h2>Registration Form</h2>
+				<div class="form-group">
+					<div class="col-sm-9">
+						<input type="text" th:field="*{fullName}" placeholder="Full Name"
+							   class="form-control"/>
+					</div>
+
+				</div>
+
+
+				<div th:if="${#fields.hasErrors('fullName')}">
+					<div class="col-sm-9">
+						<div  class="alert alert-danger">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+							<span th:errors="*{fullName}">Change a few things up and try submitting again.</span>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<div class="col-sm-9">
+						<input type="tel" th:field="*{phone}" placeholder="Phone Number"
+							   class="form-control"/>
+
+					</div>
+				</div>
+
+				<div th:if="${#fields.hasErrors('phone')}">
+					<div class="col-sm-9">
+						<div class="alert alert-danger">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+							<span th:errors="*{phone}">Change a few things up and try submitting again.</span>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<div class="col-sm-9">
+						<input type="text" th:field="*{email}" placeholder="Email"
+							   class="form-control"/>
+
+					</div>
+				</div>
+
+
+				<div th:if="${#fields.hasErrors('email')}">
+					<div class="col-sm-9">
+						<div  class="alert alert-danger">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+							<span th:errors="*{email}">Change a few things up and try submitting again.</span>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<div class="col-sm-9">
+						<input type="password" th:field="*{password}"
+							   placeholder="Password" class="form-control"/>
+
+					</div>
+				</div>
+
+
+				<div th:if="${#fields.hasErrors('password')}">
+					<div class="col-sm-9">
+						<div  class="alert alert-danger">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+							<span th:errors="*{password}">Change a few things up and try submitting again.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-9">
+						<button type="submit" class="btn btn-primary btn-block">Register User</button>
+					</div>
+				</div>
+
+				<div th:if="${successMessage != null}">
+					<div class="col-sm-9">
+						<div  class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+							<span th:utext="${successMessage}">Change a few things up and try submitting again.</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-9">
+						<a class="btn btn-warning  btn-block" th:href="@{/login}">Sign In</a>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div th:include="footer :: black"></div>
+</body>
+</html>

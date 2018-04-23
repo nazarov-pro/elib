@@ -1,0 +1,91 @@
+<div th:fragment="stylejs">
+    <meta charset="utf-8">
+    <title th:text="${title}">Title</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" th:href="@{/assert/favicon_16.ico}"/>
+    <link rel="bookmark" th:href="@{/assert/favicon_16.ico}"/>
+    <!-- site css -->
+    <link rel="stylesheet" th:href="@{/assert/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/assert/css/site.min.css}">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic"
+          rel="stylesheet" type="text/css">
+    <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'> -->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script th:src="@{/assert/js/html5shiv.js}"></script>
+    <script th:src="@{/assert/js/respond.min.js}"></script>
+    <![endif]-->
+    <script type="text/javascript" th:src="@{/assert/js/site.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assert/js/angular.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assert/js/angular-sanitize.js}"></script>
+    <script type="text/javascript" th:src="@{/assert/js/shaheen.js}"></script>
+</div>
+
+<div th:fragment="navigation">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-content-row-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="fa fa-book "></span> Elektron Kitabxana</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-content-row-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" ng-click="refresh();">Əsas Menyu</a></li>
+                    <li><a href="#about" ng-click="showAbout();" >Haqqımızda</a></li>
+                    <li><a href="#contact" ng-click="showContact();" >Əlaqə</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li sec:authorize="isAuthenticated()" class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-user"></span> <span th:text="${user.fullName}"></span>  <span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu">
+                            <li class="dropdown-header">Setting</li>
+                            <li><a href="#">Action</a></li>
+                            <li class="divider"></li>
+                            <li class="active"><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a th:href="@{/logout}"><span class="glyphicon glyphicon-log-out"></span> Signout</a></li>
+                        </ul>
+                    </li>
+                    <li th:class="${#httpServletRequest.requestURI == '/login'}  ? 'active'" sec:authorize="isAnonymous()"><a th:href="@{/login}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li th:class="${#httpServletRequest.requestURI == '/registration'}  ? 'active'" sec:authorize="isAnonymous()"><a th:href="@{/registration}"><span class="glyphicon glyphicon-lock"></span> Register</a></li>
+                </ul>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+    </nav>
+</div>
+
+<div th:fragment="categories">
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
+    <ul class="list-group panel">
+        <li class="list-group-item"><i class="glyphicon glyphicon-align-justify"></i> <b>Kateqoriyalar</b></li>
+        <li class="list-group-item">
+        <div class="input-group">
+            <input class="form-control search-query" type="text" placeholder="Nə axtarırdınız ?">
+            <span class="input-group-btn">
+                              <button data-type="last" class="btn btn-primary" type="submit">Search</button>
+                            </span>
+        </div>
+        </li>
+        <li th:each="category : ${categories}">
+            <a th:href="${category.categories.size() > 0 ? '#demo' + category.id : 'javascript:setCategory('+category.id+');'}"
+               data-toggle="collapse" class="list-group-item "><span th:text="${category.name}"></span> <span
+                    th:if="${category.categories.size() > 0}" class="glyphicon glyphicon-chevron-right"></span></a>
+            <div th:if="${category.categories.size() > 0}" class="collapse" th:id="${'demo' + category.id}">
+                <a th:href="${'javascript:setCategory('+category.id+');'}" class="list-group-item">  Hamısı</a>
+                <a th:each="category2 : ${category.categories}"
+                   th:href="${'javascript:setCategory('+category2.id+');'}" th:text="${'  ' + category2.name}"
+                   class="list-group-item">Subitem 2</a>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>

@@ -1,0 +1,70 @@
+<div th:fragment="black">
+<div class="footer">
+    <div class="container">
+        <div class="clearfix">
+            <div class="footer-logo"><a href="#">Bootflat-Admin</a></div>
+            <dl class="footer-nav">
+                <dt class="nav-title">PORTFOLIO</dt>
+                <dd class="nav-item"><a href="#">Web Design</a></dd>
+                <dd class="nav-item"><a href="#">Branding &amp; Identity</a></dd>
+                <dd class="nav-item"><a href="#">Mobile Design</a></dd>
+                <dd class="nav-item"><a href="#">Print</a></dd>
+                <dd class="nav-item"><a href="#">User Interface</a></dd>
+            </dl>
+            <dl class="footer-nav">
+                <dt class="nav-title">ABOUT</dt>
+                <dd class="nav-item"><a href="#">The Company</a></dd>
+                <dd class="nav-item"><a href="#">History</a></dd>
+                <dd class="nav-item"><a href="#">Vision</a></dd>
+            </dl>
+            <dl class="footer-nav">
+                <dt class="nav-title">GALLERY</dt>
+                <dd class="nav-item"><a href="#">Flickr</a></dd>
+                <dd class="nav-item"><a href="#">Picasa</a></dd>
+                <dd class="nav-item"><a href="#">iStockPhoto</a></dd>
+                <dd class="nav-item"><a href="#">PhotoDune</a></dd>
+            </dl>
+            <dl class="footer-nav">
+                <dt class="nav-title">CONTACT</dt>
+                <dd class="nav-item"><a href="#">Basic Info</a></dd>
+                <dd class="nav-item"><a href="#">Map</a></dd>
+                <dd class="nav-item"><a href="#">Conctact Form</a></dd>
+            </dl>
+        </div>
+        <div class="footer-copyright text-center">Copyright &copy; 2014 YourCompany.All rights reserved.</div>
+    </div>
+</div>
+<div id="contact" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Contact</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Feel free to contact us for any issues you might have with our products.</p>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>Full Name</label>
+                            <input type="text" ng-model="feedback.name" class="form-control" placeholder="Full Name">
+                        </div>
+                        <div class="col-xs-6">
+                            <label>Email</label>
+                            <input ng-model="feedback.email" type="text" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label>Message</label>
+                            <textarea class="form-control" ng-model="feedback.message" rows="3">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" ng-click="sendFeedback();">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
