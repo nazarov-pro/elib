@@ -24,6 +24,28 @@ var backToTop = function () {
 };
 
 
+var initializeLanguage = function () {
+    ///hover container lang menu
+    $("#lang-menu").hover(
+        function(){
+            $(this).addClass("cls-border-lang");
+            $(this).children().eq(0).addClass("cls-borderbottom-lang");
+            $("#lang-menu ul").stop().slideToggle(100);
+        },
+        function(){
+            $(this).removeClass("cls-border-lang");
+            $(this).children().eq(0).removeClass("cls-borderbottom-lang");
+            $("#lang-menu ul").stop().slideToggle(100);
+        }
+    );
+    /// click languages
+    $("#lang-menu ul li").on("click", function(){
+        //select lang and apply changes
+        $lang = $(this).text();
+        $("#lang-menu div").text($lang);
+    });
+};
+
 app.controller("BooksCtrl", ['$scope', '$http', '$window','$sce', function ($scope, $http, $window , $sce) {
 
     var feedback ={};
@@ -33,6 +55,7 @@ app.controller("BooksCtrl", ['$scope', '$http', '$window','$sce', function ($sco
             $scope.booksContent = $sce.trustAsHtml(response.data);
         });
         backToTop();
+        initializeLanguage();
     };
 
     $scope.showContact = function () {

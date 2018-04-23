@@ -15,7 +15,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class Security extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -45,12 +45,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		
 		http.
 			authorizeRequests()
-				.antMatchers("/").permitAll()
-				.antMatchers("/login").permitAll()
-				.antMatchers("/registration").permitAll()
-				.antMatchers("/books/**").permitAll()
-				.antMatchers("/about").permitAll()
-				.antMatchers("/contact").permitAll()
+				.antMatchers("/**").permitAll()
 				.antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
 				.authenticated().and().csrf().disable().formLogin()
 				.loginPage("/login").failureUrl("/login?error=true")
@@ -59,7 +54,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.passwordParameter("password")
 				.and().logout()
 				.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-				.logoutSuccessUrl("/").and().rememberMe().useSecureCookie(true).rememberMeParameter("rememberme").and().exceptionHandling()
+				.logoutSuccessUrl("/").and()
+				.rememberMe().useSecureCookie(true).rememberMeParameter("rememberme").and()
+				.exceptionHandling()
 				.accessDeniedPage("/access-denied");
 	}
 	

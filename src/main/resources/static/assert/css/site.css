@@ -1102,3 +1102,55 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     background-color: #373E4A;
     border-color: #373E4A
 }
+
+
+
+#lang-menu {
+    width:55px;
+    height:auto;
+    position:absolute;
+    top:30px;
+    right:50px;
+    border:1px solid rgba(255,255,255,0);
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -o-transition:all .3s ease;
+}
+.cls-border-lang {
+    border:1px solid rgba(255,255,255,.1) !important;
+}
+#lang-menu div {
+    height:25px;
+    text-align:center;
+    padding:10px;
+    border-bottom:1px solid rgba(255,255,255,0);
+    transition:all .2s ease;
+    -webkit-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -o-transition:all .2s ease;
+
+}
+.cls-borderbottom-lang {
+    border-bottom:1px solid rgba(255,255,255,.1) !important;
+    opacity:.2;
+}
+#lang-menu ul {
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    display:none;
+    text-align:center;
+}
+#lang-menu ul li {
+    padding:6px 0px;
+    transition:all .3s ease;
+    -webkit-transition:all .3s ease;
+    -moz-transition:all .3s ease;
+    -o-transition:all .3s ease;
+}
+#lang-menu ul li:hover {
+    cursor:pointer;
+    color:#fff;
+    background:rgba(255,255,255,.1);
+}
