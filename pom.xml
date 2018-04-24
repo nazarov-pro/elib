@@ -84,11 +84,20 @@
 			<artifactId>jquery-file-upload</artifactId>
 			<version>9.10.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 		<dependency>
 			<groupId>pro.nazarov</groupId>
 			<artifactId>utility</artifactId>
 			<version>1.0.4</version>
 		</dependency>
+
+
 	</dependencies>
 
 	<build>

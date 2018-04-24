@@ -2,6 +2,7 @@ package org.nazarov.shaheen.elib.controller;
 
 import javax.validation.Valid;
 
+import org.nazarov.shaheen.elib.client.GooogleRecapcha;
 import org.nazarov.shaheen.elib.mybatis.domain.User;
 import org.nazarov.shaheen.elib.mybatis.mapper.UserMapper;
 import org.nazarov.shaheen.elib.mybatis.tool.Role;
@@ -15,8 +16,14 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;
+
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 @Controller
 public class LoginController {
@@ -25,6 +32,9 @@ public class LoginController {
 	private UserMapper userMapper;
 	@Autowired
 	private PasswordEncoder encoder;
+
+	@Autowired
+	private GooogleRecapcha googleRecaptcha;
 
 	@RequestMapping(value={"/login"}, method = RequestMethod.GET)
 	public ModelAndView login(){
@@ -43,9 +53,11 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
-	public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
+	public ModelAndView createNewUser(@Valid User user,@RequestParam("g-recaptcha-response") String recaptcha,
+									  BindingResult bindingResult) {
 		ModelAndView modelAndView = new ModelAndView();
 		User userExists = userMapper.findUserByEmail(user.getEmail());
+		String hostname = null;
 		if (userExists != null) {
 			bindingResult
 					.rejectValue("email", "error.user",
@@ -53,7 +65,12 @@ public class LoginController {
 		}
 		if (bindingResult.hasErrors()) {
 			modelAndView.setViewName("registration");
-		} else {
+		}
+		else if((hostname = googleRecaptcha.getIpAddress(recaptcha)) == null){
+			bindingResult
+					.rejectValue("email", "error.user",
+							"Please validate recaptcha");
+		} else{
 			user.setRole(Role.USER);
 			user.setStatus(Status.TRUE);
 			user.setPassword(encoder.encode(user.getPassword()));

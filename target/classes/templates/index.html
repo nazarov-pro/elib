@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       th:with="language=${#locale.language}"
-      th:lang="${language}" >
+      th:lang="${language}">
 <head th:include="header :: stylejs">
 </head>
 
-<body ng-app="ElibApp" ng-controller="BooksCtrl" >
+<body ng-app="ElibApp" ng-controller="BooksCtrl">
 <div th:include="header :: navigation"></div>
 <div class="container-fluid">
-    <!--documents-->
     <div class="row row-offcanvas row-offcanvas-left">
         <div th:include="header :: categories"></div>
-        <div  ng-bind-html="booksContent" class="col-xs-12 col-sm-9 content"></div><!-- content -->
+        <div ng-bind-html="booksContent" class="col-xs-12 col-sm-9 content"></div><!-- content -->
     </div>
 </div>
-<h1 th:text="${#locale.language}"></h1>
-<!--footer-->
+
 <div th:include="footer :: black"></div>
-<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button"
+   title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span
+        class="glyphicon glyphicon-chevron-up"></span></a>
 </body>
 </html>
